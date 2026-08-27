@@ -217,8 +217,15 @@
     // Valeurs possibles : "aventurier", "complice", "tendre", "batisseur"
     const codeToKey={A:"aventurier",C:"complice",P:"tendre",B:"batisseur"};
     document.getElementById('profil-couple').value = codeToKey[win];
-    // === BREVO : ici, envoyer email + champ PROFIL_COUPLE à ta liste ===
-    // Brevo enverra alors l'email détaillé correspondant au profil (automatisation).
+
+    // Envoi à Brevo (email + prénom + profil)
+    const BREVO_URL="https://fb4f4ac6.sibforms.com/serve/MUIFAGkxwtVL-eX5tCLWsv9tlrtho9krGHGnXAo-7mnkajMTaEnuxkTs1sxIhWe6QxDj7SRoquALveNsWEMyDz0-mQrKlSUxNWROUuat_c4CQ_-34XAUciGCORhT8hUoq-y9LqW2rh2dFxad4CqrKtMTkgU5iP3j9Xe7wfdxiWWeb3B8M5zN-Gl-q2x4TxeERi0pbPmu8OMT5Ysfhg==";
+    const fd=new FormData();
+    fd.append('EMAIL',document.getElementById('email').value.trim());
+    const pr=document.getElementById('prenom').value.trim();
+    if(pr) fd.append('PRENOM',pr);
+    fd.append('PROFIL_COUPLE',codeToKey[win]);
+    fetch(BREVO_URL,{method:'POST',body:fd,mode:'no-cors'});
 
     document.getElementById('r-badge').textContent=P.badge;
     document.getElementById('r-title').textContent=P.t;

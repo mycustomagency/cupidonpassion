@@ -302,7 +302,10 @@
   document.getElementById('capture').addEventListener('submit',()=>{
     const em=document.getElementById('email').value, ok=document.getElementById('ok').checked;
     if(!em||!ok) return;
-    // === BREVO : brancher l'envoi de l'email ici ===
+    // Envoi à Brevo
+    const BREVO_URL="https://fb4f4ac6.sibforms.com/serve/MUIFAGkxwtVL-eX5tCLWsv9tlrtho9krGHGnXAo-7mnkajMTaEnuxkTs1sxIhWe6QxDj7SRoquALveNsWEMyDz0-mQrKlSUxNWROUuat_c4CQ_-34XAUciGCORhT8hUoq-y9LqW2rh2dFxad4CqrKtMTkgU5iP3j9Xe7wfdxiWWeb3B8M5zN-Gl-q2x4TxeERi0pbPmu8OMT5Ysfhg==";
+    const fd=new FormData(); fd.append('EMAIL',em.trim());
+    fetch(BREVO_URL,{method:'POST',body:fd,mode:'no-cors'});
     gate.innerHTML='<span class="badge-tp">Merci !</span><h2 style="margin:6px 0 10px">Bienvenue dans la lettre</h2>'+
       '<p style="color:var(--creme-doux);max-width:44ch;margin:0 auto">Votre première idée arrive très vite dans votre boîte mail. À bientôt pour de nouveaux moments à deux.</p>';
   });
