@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none" role="img" aria-label="Une route qui serpente vers un coeur, sous les etoiles">
+<defs>
+<radialGradient id="sky" cx="50%" cy="28%" r="75%">
+<stop offset="0%" stop-color="#3432ca" stop-opacity="0.55"/>
+<stop offset="60%" stop-color="#6d5a86" stop-opacity="0.18"/>
+<stop offset="100%" stop-color="#0d0b2e" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="road" x1="0.5" y1="1" x2="0.5" y2="0">
+<stop offset="0" stop-color="#e8455a"/>
+<stop offset="0.55" stop-color="#ff8fa3"/>
+<stop offset="1" stop-color="#e5b567"/>
+</linearGradient>
+<linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#6d5a86" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#0d0b2e" stop-opacity="0.05"/>
+</linearGradient>
+</defs>
+
+<!-- halo ciel -->
+<circle cx="210" cy="150" r="205" fill="url(#sky)"/>
+
+<!-- etoiles -->
+<g fill="#f7f2ea">
+<circle cx="60" cy="60" r="2" opacity="0.9"/><circle cx="110" cy="38" r="1.3" opacity="0.7"/>
+<circle cx="330" cy="52" r="2.1" opacity="0.9"/><circle cx="366" cy="110" r="1.5" opacity="0.7"/>
+<circle cx="300" cy="28" r="1.2" opacity="0.6"/><circle cx="44" cy="120" r="1.5" opacity="0.7"/>
+<circle cx="384" cy="180" r="1.5" opacity="0.7"/><circle cx="28" cy="180" r="1.3" opacity="0.6"/>
+<circle cx="150" cy="30" r="1.1" opacity="0.6"/>
+</g>
+
+<!-- croissant de lune -->
+<g transform="translate(322,86)">
+<circle cx="0" cy="0" r="20" fill="#e5b567"/>
+<circle cx="7" cy="-4" r="18" fill="#0d0b2e"/>
+</g>
+
+<!-- collines douces a l'horizon -->
+<path d="M40 250 Q120 220 200 246 T392 244 L392 300 L40 300 Z" fill="url(#hill)"/>
+<path d="M40 268 Q140 246 230 268 T392 268 L392 320 L40 320 Z" fill="url(#hill)" opacity="0.7"/>
+
+<!-- la route qui serpente vers le coeur -->
+<path d="M120 400
+         C150 360 110 330 175 300
+         C230 275 195 250 210 226
+         C218 212 210 202 211 192"
+      stroke="url(#road)" stroke-width="30" stroke-linecap="round" fill="none" opacity="0.28"/>
+<path d="M120 400
+         C150 360 110 330 175 300
+         C230 275 195 250 210 226
+         C218 212 210 202 211 192"
+      stroke="url(#road)" stroke-width="16" stroke-linecap="round" fill="none"/>
+<!-- ligne mediane pointillee -->
+<path d="M120 400
+         C150 360 110 330 175 300
+         C230 275 195 250 210 226
+         C218 212 210 202 211 192"
+      stroke="#f7f2ea" stroke-width="2.4" stroke-linecap="round" fill="none"
+      stroke-dasharray="2 12" opacity="0.85"/>
+
+<!-- coeur d'arrivee, dore et lumineux, detache de la route -->
+<circle cx="210" cy="158" r="30" fill="#e5b567" opacity="0.16"/>
+<circle cx="210" cy="158" r="19" fill="none" stroke="#e5b567" stroke-width="2" opacity="0.7"/>
+<path d="M210 172 l-13 -14 a7.8 7.8 0 0 1 13 -8.8 a7.8 7.8 0 0 1 13 8.8 z" fill="#e5b567"/>
+
+<!-- deux silhouettes qui marchent ensemble sur la route -->
+<g transform="translate(163,336)">
+  <!-- amoureux 1 (corail) -->
+  <circle cx="0" cy="0" r="7" fill="#e8455a"/>
+  <path d="M0 7 L0 27 M0 12 L-9 20 M0 12 L9 18 M0 27 L-7 42 M0 27 L7 42"
+        stroke="#e8455a" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- amoureux 2 (rose), legerement en avant, bras relie -->
+  <g transform="translate(20,4)">
+  <circle cx="0" cy="0" r="7" fill="#ff8fa3"/>
+  <path d="M0 7 L0 27 M0 12 L9 20 M0 12 L-9 18 M0 27 L-7 42 M0 27 L7 42"
+        stroke="#ff8fa3" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- petit coeur au dessus d'eux -->
+  <path d="M10 -14 l-4 -4.4 a2.5 2.5 0 0 1 4 -2.8 a2.5 2.5 0 0 1 4 2.8 z" fill="#e5b567"/>
+</g>
+</svg>

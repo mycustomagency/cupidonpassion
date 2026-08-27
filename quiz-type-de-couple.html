@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quel type de couple êtes-vous ? Le quiz à faire à deux</title>
+<meta name="description" content="Faites le quiz Cupidon Passion et découvrez quel type de couple vous êtes : votre profil, vos forces et des idées sur mesure pour raviver votre complicité. Gratuit, en 7 questions.">
+<link rel="canonical" href="https://cupidonpassion.com/quiz-type-de-couple.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quel type de couple êtes-vous ?">
+<meta property="og:description" content="7 questions pour découvrir votre profil de couple et des idées sur mesure.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://cupidonpassion.com/quiz-type-de-couple.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .quiz-wrap{max-width:680px;margin:0 auto;padding:40px 0 70px}
+  .progress{height:8px;background:var(--voile);border-radius:99px;overflow:hidden;margin:18px 0 30px}
+  .progress i{display:block;height:100%;width:0;border-radius:99px;
+    background:linear-gradient(90deg,var(--corail),var(--or));transition:width .35s ease}
+  .card-q{background:linear-gradient(180deg,var(--voile),rgba(255,255,255,.02));
+    border:1px solid var(--trait);border-radius:22px;padding:34px 30px}
+  .card-q h2{font-size:1.5rem;margin-bottom:22px}
+  .answers{display:grid;gap:12px}
+  .answer{display:flex;align-items:center;gap:14px;text-align:left;width:100%;
+    background:rgba(255,255,255,.04);border:1px solid var(--trait);border-radius:14px;
+    padding:16px 18px;color:#fff;font-size:1.05rem;font-weight:500;cursor:pointer;
+    transition:transform .14s,border-color .14s,background .14s}
+  .answer:hover{transform:translateY(-2px);border-color:var(--or);background:rgba(255,255,255,.09)}
+  .answer .dot{width:22px;height:22px;border-radius:50%;border:2px solid var(--rose);flex:0 0 auto}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
+  .quiz-nav .step{color:var(--creme-doux);font-size:.9rem}
+  .link-back{background:none;border:0;color:var(--creme-doux);cursor:pointer;font-size:.95rem}
+  .link-back:hover{color:#fff}
+  .gate,.result{display:none}
+  .gate.on,.result.on{display:block}
+  .card-q.hide{display:none}
+  .news-lg{display:grid;gap:12px;max-width:420px;margin:22px auto 0}
+  .news-lg input{padding:15px 18px;border-radius:14px;border:1px solid var(--trait);
+    background:rgba(255,255,255,.06);color:#fff;font-size:1rem;width:100%}
+  .news-lg input::placeholder{color:#a9a3c0}
+  .center{text-align:center}
+  .badge{display:inline-block;font-family:"Dancing Script",cursive;font-size:2rem;color:var(--or);margin-bottom:6px}
+  .consent{font-size:.82rem;color:#9d97b5;display:flex;gap:8px;align-items:flex-start;text-align:left}
+  .consent input{margin-top:4px}
+  .mail-note{background:rgba(229,181,103,.1);border:1px solid rgba(229,181,103,.35);
+    border-radius:14px;padding:16px 20px;margin:22px 0 0;color:var(--creme-doux);font-size:.98rem}
+  .mail-note strong{color:var(--or)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/cupidon.png" alt="Mascotte Cupidon Passion">
+      <span class="name">Cupidon <b>Passion</b></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="menu" id="menu">
+      <a href="idees-rendez-vous-couple.html">Idées de rendez-vous</a>
+      <a href="questions-a-poser-en-couple.html">Questions à poser</a>
+      <a href="tu-preferes-couple.html">Tu préfères</a>
+      <a class="btn btn-primary" href="quiz-type-de-couple.html">Faire le quiz</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="quiz-wrap wrap">
+
+  <div class="center" id="intro-head">
+    <p class="eyebrow">Le quiz Cupidon</p>
+    <h1>Quel type de couple êtes-vous ?</h1>
+    <p style="color:var(--creme-doux)">Sept questions, deux minutes. À la fin, votre profil de couple et des idées sur mesure pour raviver votre complicité.</p>
+  </div>
+
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+
+  <div id="quiz-body"></div>
+
+  <!-- Email gate -->
+  <div class="gate card-q" id="gate">
+    <div class="center">
+      <span class="badge">C'est presque prêt</span>
+      <h2>Votre profil de couple est calculé</h2>
+      <p style="color:var(--creme-doux)">Laissez votre e-mail pour découvrir votre résultat détaillé et recevoir, chaque semaine, une idée pour votre couple. Sans blabla, désinscription en un clic.</p>
+    </div>
+    <form class="news-lg" id="capture" onsubmit="return false">
+      <input type="text" id="prenom" placeholder="Votre prénom" aria-label="Votre prénom">
+      <input type="email" id="email" placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail" required>
+      <input type="hidden" id="profil-couple" name="PROFIL_COUPLE" value="">
+      <label class="consent"><input type="checkbox" id="ok" required> J'accepte de recevoir la lettre de Cupidon et je pourrai me désinscrire à tout moment.</label>
+      <button class="btn btn-primary" type="submit">Découvrir mon résultat</button>
+    </form>
+  </div>
+
+  <!-- Result -->
+  <div class="result card-q" id="result">
+    <div class="center">
+      <span class="badge" id="r-badge">Votre profil</span>
+      <h2 id="r-title">—</h2>
+    </div>
+    <p id="r-text" style="color:#e9e6f2"></p>
+    <div class="tip" id="r-tip"></div>
+    <div class="mail-note" id="r-mailnote">
+      <strong>Votre version détaillée arrive par e-mail.</strong> Idées de rendez-vous sur mesure, défi du mois et conseils pensés pour votre profil : jetez un œil à votre boîte mail dans quelques minutes.
+    </div>
+    <div class="center" style="margin-top:24px">
+      <a class="btn btn-primary" href="idees-rendez-vous-couple.html">Voir des idées pour nous</a>
+      <a class="btn btn-ghost" href="index.html#ressources" style="margin-left:10px">Découvrir le carnet</a>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-bottom" style="border:0">
+      <span>© 2026 Cupidon Passion. En route vers l'Amour.</span>
+      <span>Vos données restent confidentielles.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const b=document.querySelector('.burger'), m=document.getElementById('menu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+
+  // Chaque réponse pointe vers un profil : A aventurier, C complice, P poseur/tendre, B bâtisseur
+  const QUIZ=[
+    {q:"Un vendredi soir libre s'annonce. Votre réflexe idéal ?",
+     a:[["Trouver une sortie de dernière minute","A"],["Cuisiner et se poser tous les deux","C"],["Un dîner tendre en tête-à-tête","P"],["Avancer sur un projet qui nous tient à cœur","B"]]},
+    {q:"Ce qui vous rapproche le plus, c'est…",
+     a:[["Vivre des expériences nouvelles","A"],["Rire des mêmes choses","C"],["Les petites attentions du quotidien","P"],["Construire des choses ensemble","B"]]},
+    {q:"En vacances, vous êtes plutôt…",
+     a:[["Sac sur le dos, au gré de l'envie","A"],["Cocooning et grasses matinées","C"],["Escapade romantique soignée","P"],["Programme réfléchi et bien rempli","B"]]},
+    {q:"Votre plus belle preuve d'amour ?",
+     a:[["M'embarquer dans une aventure","A"],["Me faire rire quand ça ne va pas","C"],["Une lettre ou un mot doux","P"],["Se projeter loin avec moi","B"]]},
+    {q:"Quand une tension surgit, vous…",
+     a:[["Changez d'air pour décompresser","A"],["Désamorcez avec humour","C"],["Cherchez le câlin qui répare","P"],["En parlez posément pour régler","B"]]},
+    {q:"Le projet qui vous fait le plus vibrer à deux ?",
+     a:[["Un grand voyage","A"],["Une maison pleine de vie","C"],["Renouveler nos rituels tendres","P"],["Un cap de vie ambitieux","B"]]},
+    {q:"Dans un an, vous aimeriez que votre couple soit…",
+     a:[["Plus surprenant","A"],["Plus complice","C"],["Plus tendre","P"],["Plus solide et aligné","B"]]}
+  ];
+
+  const PROFILS={
+    A:{t:"Le couple aventurier",badge:"Vous êtes…",
+       txt:"Vous fonctionnez à l'élan et à la nouveauté. Ce qui nourrit votre couple, c'est de vivre des choses ensemble, de sortir du cadre et de collectionner les souvenirs. Votre vigilance : ne pas laisser la routine s'installer les semaines chargées, en gardant toujours une prochaine aventure au calendrier.",
+       tip:"Votre défi du mois : bloquez une date pour une micro-aventure, même toute simple, et tenez-la quoi qu'il arrive."},
+    C:{t:"Le couple complice",badge:"Vous êtes…",
+       txt:"Votre force, c'est la légèreté et le rire partagé. Vous vous comprenez à demi-mot et transformez le quotidien en terrain de jeu. Votre vigilance : penser aussi à approfondir, car derrière l'humour se cachent parfois des conversations qu'on n'ose pas ouvrir.",
+       tip:"Votre défi du mois : une soirée par mois, posez-vous trois questions plus profondes que d'habitude."},
+    P:{t:"Le couple tendre",badge:"Vous êtes…",
+       txt:"Vous vivez l'amour dans les gestes doux et les attentions du quotidien. La tendresse est votre langage. Votre vigilance : ne pas vous oublier dans le confort, en vous offrant régulièrement des moments qui sortent de l'ordinaire.",
+       tip:"Votre défi du mois : surprenez l'autre avec un rendez-vous inattendu, hors de vos habitudes."},
+    B:{t:"Le couple bâtisseur",badge:"Vous êtes…",
+       txt:"Vous regardez dans la même direction et aimez construire : projets, avenir, cap commun. Votre couple est une équipe. Votre vigilance : ne pas tout ramener aux projets, en gardant des moments gratuits, juste pour le plaisir d'être ensemble.",
+       tip:"Votre défi du mois : offrez-vous une soirée sans objectif ni to-do, juste vous deux."}
+  };
+
+  const body=document.getElementById('quiz-body'),
+        gate=document.getElementById('gate'),
+        result=document.getElementById('result'),
+        bar=document.getElementById('bar');
+  let idx=0; const answers=[];
+
+  function render(){
+    document.getElementById('intro-head').style.display = idx===0 ? '' : 'none';
+    bar.style.width = (idx/QUIZ.length*100)+'%';
+    const Q=QUIZ[idx];
+    body.innerHTML='';
+    const card=document.createElement('div'); card.className='card-q';
+    const h=document.createElement('h2'); h.textContent=Q.q; card.appendChild(h);
+    const wrap=document.createElement('div'); wrap.className='answers';
+    Q.a.forEach(([label,code])=>{
+      const btn=document.createElement('button'); btn.className='answer';
+      btn.innerHTML='<span class="dot"></span>'+label;
+      btn.onclick=()=>{answers[idx]=code; idx++; next();};
+      wrap.appendChild(btn);
+    });
+    card.appendChild(wrap);
+    const nav=document.createElement('div'); nav.className='quiz-nav';
+    const back=document.createElement('button'); back.className='link-back';
+    back.textContent= idx>0 ? '← Question précédente' : '';
+    back.onclick=()=>{ if(idx>0){idx--; render();} };
+    const step=document.createElement('span'); step.className='step';
+    step.textContent='Question '+(idx+1)+' sur '+QUIZ.length;
+    nav.appendChild(back); nav.appendChild(step);
+    card.appendChild(nav);
+    body.appendChild(card);
+  }
+
+  function next(){
+    if(idx<QUIZ.length){ render(); }
+    else { // show gate
+      document.getElementById('intro-head').style.display='none';
+      bar.style.width='100%';
+      body.innerHTML=''; gate.classList.add('on');
+    }
+  }
+
+  // capture -> affiche le résultat + prépare l'envoi du profil à Brevo
+  document.getElementById('capture').addEventListener('submit',()=>{
+    if(!document.getElementById('email').value || !document.getElementById('ok').checked) return;
+    const tally={A:0,C:0,P:0,B:0};
+    answers.forEach(c=>tally[c]++);
+    const win=Object.keys(tally).sort((x,y)=>tally[y]-tally[x])[0];
+    const P=PROFILS[win];
+
+    // Le profil calculé, à transmettre à Brevo dans un attribut de contact (ex: PROFIL_COUPLE)
+    // Valeurs possibles : "aventurier", "complice", "tendre", "batisseur"
+    const codeToKey={A:"aventurier",C:"complice",P:"tendre",B:"batisseur"};
+    document.getElementById('profil-couple').value = codeToKey[win];
+    // === BREVO : ici, envoyer email + champ PROFIL_COUPLE à ta liste ===
+    // Brevo enverra alors l'email détaillé correspondant au profil (automatisation).
+
+    document.getElementById('r-badge').textContent=P.badge;
+    document.getElementById('r-title').textContent=P.t;
+    document.getElementById('r-text').textContent=P.txt;
+    document.getElementById('r-tip').textContent=P.tip;
+    gate.classList.remove('on');
+    result.classList.add('on');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  render();
+</script>
+</body>
+</html>

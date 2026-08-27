@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" role="img" aria-label="Une lettre scellée d'un coeur">
+<defs><linearGradient id="env" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#3432ca" stop-opacity="0.4"/><stop offset="1" stop-color="#e8455a" stop-opacity="0.3"/>
+</linearGradient></defs>
+<rect x="40" y="45" width="160" height="100" rx="10" fill="url(#env)" stroke="#ff8fa3" stroke-width="2"/>
+<path d="M40 55l80 55 80-55" stroke="#ff8fa3" stroke-width="2" fill="none"/>
+<circle cx="120" cy="92" r="16" fill="#e8455a"/>
+<path d="M120 99l-8-9a5 5 0 0 1 8-5 5 5 0 0 1 8 5z" fill="#f7f2ea"/>
+<g stroke="#e5b567" stroke-width="1.5" opacity="0.7" fill="none">
+<path d="M20 30c20 6 26 22 46 20"/><circle cx="20" cy="30" r="2.5" fill="#e5b567"/>
+<path d="M220 150c-20-6-26-22-46-20"/><circle cx="220" cy="150" r="2.5" fill="#e5b567"/>
+</g>
+</svg>
