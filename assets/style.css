@@ -148,6 +148,28 @@ section{padding:64px 0}
 .aff h4{margin:.3em 0 .4em;color:#fff;font-size:1.1rem}
 .aff p{margin:0 0 14px;color:var(--creme-doux);font-size:.95rem}
 
+/* Cartes produits affiliation */
+.picks{margin:26px 0}
+.picks-lbl{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--or);font-weight:700;margin-bottom:14px}
+.pick{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(232,69,90,.12),rgba(52,50,202,.16));
+  border:1px solid var(--trait);border-radius:var(--r);padding:20px 22px;margin-bottom:14px;
+  transition:transform .16s ease,border-color .16s ease}
+.pick:hover{transform:translateY(-3px);border-color:rgba(229,181,103,.5)}
+.pick-ico{flex:0 0 auto;width:64px;height:64px;border-radius:14px;display:grid;place-items:center;
+  background:rgba(255,255,255,.05);border:1px solid var(--trait)}
+.pick-ico img{width:44px;height:44px}
+.pick-txt{flex:1;min-width:200px}
+.pick-txt h4{margin:0 0 6px;color:#fff;font-size:1.12rem}
+.pick-txt p{margin:0;color:var(--creme-doux);font-size:.95rem}
+.pick-cta{flex:0 0 auto}
+.pick .btn{white-space:nowrap}
+.aff-note{font-size:.8rem;color:#8f89a8;margin-top:6px}
+/* bandeau illustré en tête de page pilier */
+.page-hero{display:flex;justify-content:center;margin:0 0 6px}
+.page-hero img{width:100%;max-width:420px;height:auto;
+  filter:drop-shadow(0 14px 30px rgba(52,50,202,.3))}
+
 /* newsletter */
 .news{display:flex;gap:12px;flex-wrap:wrap;max-width:460px}
 .news input{flex:1;min-width:200px;padding:14px 18px;border-radius:999px;border:1px solid var(--trait);
@@ -164,6 +186,8 @@ footer.site{border-top:1px solid var(--trait);padding:48px 0 34px;margin-top:40p
 .foot-brand .name{font-family:"Dancing Script",cursive;font-size:1.5rem;color:#fff}
 .foot-bottom{margin-top:30px;padding-top:20px;border-top:1px solid var(--trait);
   color:#9d97b5;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-bottom a{color:#7a7594;text-decoration:none;font-size:.82rem}
+.foot-bottom a:hover{color:#9d97b5;text-decoration:underline}
 .disc{color:#8f89a8;font-size:.8rem;margin-top:8px}
 
 /* accessibilité */

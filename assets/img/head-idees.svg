@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 130" fill="none" role="img" aria-label="Un rendez-vous à deux autour d'un café">
+<defs><radialGradient id="hr" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#e8455a" stop-opacity="0.28"/><stop offset="1" stop-color="#0d0b2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="220" height="130" fill="url(#hr)"/>
+<path d="M62 62h34v14a17 17 0 0 1-34 0z" fill="#e8455a" opacity="0.25" stroke="#ff8fa3" stroke-width="2"/>
+<path d="M96 66h7a7 7 0 0 1 0 14h-3" stroke="#ff8fa3" stroke-width="2"/>
+<path d="M124 60h34v12a17 17 0 0 1-34 0z" fill="#e5b567" opacity="0.22" stroke="#e5b567" stroke-width="2"/>
+<path d="M158 64h6a6 6 0 0 1 0 12h-2" stroke="#e5b567" stroke-width="2"/>
+<path d="M74 50c0 5 5 5 5 10M84 50c0 5 5 5 5 10" stroke="#ff8fa3" stroke-width="2" stroke-linecap="round"/>
+<path d="M138 48c0 5 5 5 5 10M148 48c0 5 5 5 5 10" stroke="#e5b567" stroke-width="2" stroke-linecap="round"/>
+<path d="M110 40c-3-2-5-6-1-7 2-.8 2 4 1 7zM110 40c3-2 5-6 1-7-2-.8-2 4-1 7z" fill="#ff8fa3"/>
+<rect x="52" y="96" width="116" height="4" rx="2" fill="#6d5a86" opacity="0.5"/>
+<g fill="#f7f2ea" opacity="0.8"><circle cx="196" cy="28" r="1.6"/><circle cx="28" cy="30" r="1.4"/></g>
+</svg>

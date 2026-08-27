@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 130" fill="none" role="img" aria-label="Deux personnes qui échangent">
+<defs><radialGradient id="hq" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#3432ca" stop-opacity="0.35"/><stop offset="1" stop-color="#0d0b2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="220" height="130" fill="url(#hq)"/>
+<path d="M28 40h70a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H55l-14 12v-12h-13a8 8 0 0 1-8-8V48a8 8 0 0 1 8-8z" fill="#e8455a" opacity="0.25" stroke="#ff8fa3" stroke-width="2"/>
+<circle cx="45" cy="59" r="3" fill="#ff8fa3"/><circle cx="60" cy="59" r="3" fill="#ff8fa3"/><circle cx="75" cy="59" r="3" fill="#ff8fa3"/>
+<path d="M128 58h58a8 8 0 0 1 8 8v20a8 8 0 0 1-8 8h-30l-12 10v-10h-16a8 8 0 0 1-8-8V66a8 8 0 0 1 8-8z" fill="#3432ca" opacity="0.3" stroke="#e5b567" stroke-width="2"/>
+<path d="M158 76c-4-3-7-8-2-10 3-1.4 4 5 2 10zM158 76c4-3 7-8 2-10-3-1.4-4 5-2 10z" fill="#e5b567"/>
+<g fill="#f7f2ea" opacity="0.8"><circle cx="200" cy="24" r="1.6"/><circle cx="30" cy="20" r="1.4"/><circle cx="120" cy="18" r="1.2"/></g>
+</svg>
