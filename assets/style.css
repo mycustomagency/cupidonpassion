@@ -165,6 +165,19 @@ section{padding:64px 0}
 .pick-cta{flex:0 0 auto}
 .pick .btn{white-space:nowrap}
 .aff-note{font-size:.8rem;color:#8f89a8;margin-top:6px}
+/* Bloc lettre en bas des pages de contenu */
+.letter-cta{display:flex;gap:24px;align-items:center;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(255,143,163,.1),rgba(52,50,202,.16));
+  border:1px solid var(--trait);border-radius:var(--r);padding:28px 30px;margin:30px 0}
+.letter-cta > img{flex:0 0 auto}
+.letter-cta-txt{flex:1;min-width:260px}
+.letter-cta-txt .eyebrow{margin-bottom:6px}
+.letter-cta-txt h3{color:#fff;font-size:1.3rem;margin:0 0 8px}
+.letter-cta-txt > p{color:var(--creme-doux);font-size:.96rem;margin:0 0 16px;max-width:52ch}
+.news-inline{display:flex;gap:10px;flex-wrap:wrap}
+.news-inline input{flex:1;min-width:200px;padding:13px 16px;border-radius:30px;
+  border:1px solid var(--trait);background:rgba(255,255,255,.05);color:var(--creme);font-size:.95rem}
+.news-inline input::placeholder{color:#8f89a8}
 /* bandeau illustré en tête de page pilier */
 .page-hero{display:flex;justify-content:center;margin:0 0 6px}
 .page-hero img{width:100%;max-width:420px;height:auto;

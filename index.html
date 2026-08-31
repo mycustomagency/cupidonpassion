@@ -134,7 +134,7 @@
       <div class="txt">
         <p class="eyebrow">Le quiz du moment</p>
         <h2>Quel type de couple êtes-vous ?</h2>
-        <p>Sept questions, deux minutes, et vous découvrez votre profil de couple avec des idées sur mesure pour raviver votre complicité. Gratuit, et vos résultats détaillés arrivent par e-mail.</p>
+        <p>Sept questions, deux minutes, et vous découvrez votre profil de couple avec des idées pour raviver votre complicité. Gratuit, et vous rejoignez la lettre de Cupidon au passage.</p>
         <a class="btn btn-primary" href="quiz-type-de-couple.html">Faire le quiz</a>
       </div>
     </div>
@@ -145,14 +145,14 @@
   <div class="wrap lettre-inner">
     <div class="lettre-art"><img src="assets/img/mail.svg" alt="Une lettre scellée d'un cœur" width="240" height="180"></div>
     <div class="lettre-copy">
-      <p class="eyebrow">La lettre de Cupidon</p>
-      <h2>Une idée pour votre couple, chaque semaine</h2>
-      <p style="color:var(--creme-doux);max-width:46ch">Rejoignez la lettre et recevez une idée de rendez-vous ou un défi à tester, directement dans votre boîte mail. Gratuit, et sans blabla.</p>
+      <p class="eyebrow">Cadeau de bienvenue</p>
+      <h2>Recevez Le Kit des Amoureux, gratuitement</h2>
+      <p style="color:var(--creme-doux);max-width:48ch">52 idées de rendez-vous, 80 questions, des jeux et des défis à vivre à deux : notre carnet à imprimer, offert quand vous rejoignez la lettre de Cupidon. Vous recevrez ensuite une nouvelle idée chaque semaine.</p>
       <form class="news" id="news-home" onsubmit="return false">
         <input type="email" id="news-home-email" placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail" required>
-        <button class="btn btn-primary" type="submit">Je m'inscris</button>
+        <button class="btn btn-primary" type="submit">Recevoir mon kit gratuit</button>
       </form>
-      <p class="disc" id="news-home-msg">Une idée par semaine. Désinscription en un clic, à tout moment.</p>
+      <p class="disc" id="news-home-msg">Envoi immédiat par e-mail. Désinscription en un clic, à tout moment.</p>
     </div>
   </div>
 </section>
@@ -203,8 +203,11 @@
       const fd=new FormData();
       fd.append('EMAIL',email);
       fetch(BREVO_URL,{method:'POST',body:fd,mode:'no-cors'});
-      document.getElementById('news-home-msg').textContent="Merci ! Votre inscription est bien prise en compte.";
-      document.getElementById('news-home-email').value="";
+      const copy=document.querySelector('.lettre-copy');
+      copy.innerHTML='<p class="eyebrow">C\'est à vous</p>'+
+        '<h2>Merci, et bienvenue chez Cupidon !</h2>'+
+        '<p style="color:var(--creme-doux);max-width:48ch">Votre Kit des Amoureux vous attend. Cliquez ci-dessous pour le télécharger, et gardez un œil sur votre boîte mail pour vos prochaines idées.</p>'+
+        '<a class="btn btn-primary" href="ressources/Le-Kit-des-Amoureux.pdf" download style="margin-top:6px">Télécharger mon kit</a>';
     });
   }
 </script>
