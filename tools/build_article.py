@@ -93,7 +93,7 @@ def main(path):
     text = re.sub(r"<[^>]+>", " ", body)
     words = len(text.split())
     print(f"OK {page} | {words} mots | title {len(t)} car. | meta {len(desc)} car.")
-    if "—" in out.split("<article")[1]: print("ATTENTION : tiret cadratin présent")
+    assert "\u2014" not in out.split("<article")[1] and "\u2013" not in out.split("<article")[1], "tiret cadratin ou demi-cadratin interdit : réécrire la phrase"
 
 if __name__ == "__main__":
     main(sys.argv[1])

@@ -16,7 +16,7 @@ Les images sont à déposer par Vanessa dans `assets/img/blog/` avec le nom de f
 Tant qu'un fichier est absent, la figure se masque automatiquement : la page ne montre jamais d'image cassée.
 
 ## Règles d'écriture
-- Vouvoiement, ton chaleureux et concret. Aucun tiret cadratin.
+- Vouvoiement, ton chaleureux et concret. Aucun tiret cadratin ni demi-cadratin (le script refuse de générer la page s'il en trouve), car cela trahit une rédaction par IA.
 - 1 200 à 1 800 mots, H2 sous forme de questions ou de listes, FAQ de 3 questions.
 - Title 60 caractères max, meta description 155 max (le script bloque sinon).
 - Au moins 3 liens internes, un seul appel à l'action principal (jeu ou quiz).
