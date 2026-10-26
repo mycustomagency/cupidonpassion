@@ -43,7 +43,6 @@ def main(path):
         head = head.replace('<meta property="og:locale"', f'<meta property="og:image" content="{BASE}{og_img}">\n<meta property="og:locale"', 1)
     today = d.get("date") or datetime.date.today().isoformat()
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": t, "inLanguage": "fr-FR",
-          "datePublished": today, "dateModified": today,
           "author": {"@type": "Organization", "name": "Cupidon Passion"},
           "publisher": {"@type": "Organization", "name": "Cupidon Passion"},
           "description": desc, "mainEntityOfPage": url}
@@ -59,7 +58,7 @@ def main(path):
     # --- corps
     parts = [f'<article class="article wrap">\n  <p class="meta"><a href="index.html">Accueil</a> › <a href="conseils.html">Conseils</a> › {esc(d["h1"])}</p>',
              f'  <h1>{esc(d["h1"])}</h1>',
-             f'  <p class="meta">Mis à jour en {d["updated_label"]} · Lecture {d["minutes"]} min</p>']
+             f'  <p class="meta">Lecture {d["minutes"]} min</p>']
     body = d["body_html"]
     # figures : {{img:clé}} dans le corps
     for key, im in d.get("images", {}).items():
@@ -77,7 +76,7 @@ def main(path):
     sm_path = os.path.join(ROOT, "sitemap.xml")
     sm = open(sm_path, encoding="utf-8").read()
     if url not in sm:
-        sm = sm.replace("</urlset>", f'  <url><loc>{url}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>')
+        sm = sm.replace("</urlset>", f'  <url><loc>{url}</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>')
         open(sm_path, "w", encoding="utf-8").write(sm)
 
     # --- grille conseils

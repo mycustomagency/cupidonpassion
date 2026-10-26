@@ -21,5 +21,6 @@ Tant qu'un fichier est absent, la figure se masque automatiquement : la page ne 
 - Title 60 caractères max, meta description 155 max (le script bloque sinon).
 - Au moins 3 liens internes, un seul appel à l'action principal (jeu ou quiz).
 - Aucune statistique ni étude inventée, aucun chiffre sur le site susceptible de changer.
+- Articles intemporels : aucune date visible ni dans les données, pas d'année dans le texte (écrire « l'année suivante », « cette saison »).
 - Signature : « L'équipe Cupidon Passion ».
 - Liens d'affiliation Amazon : seulement si utiles, avec `rel="sponsored nofollow noopener"` et la mention partenaire.
