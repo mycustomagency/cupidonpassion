@@ -15,6 +15,9 @@ Rien n'est publié tant que la PR n'est pas fusionnée (merge) par Vanessa.
 Les images sont à déposer par Vanessa dans `assets/img/blog/` avec le nom de fichier indiqué dans la PR.
 Tant qu'un fichier est absent, la figure se masque automatiquement : la page ne montre jamais d'image cassée.
 
+## Prompts d'images (pour Gemini ou autre)
+Dans la PR, fournir pour chaque image un prompt prêt à coller : photographie réaliste, lumière naturelle chaude, ambiance cosy, aucune personne ni visage, aucun texte lisible, style éditorial naturel, format paysage 3:2, haute résolution, avec le sujet précis de l'image. Rappeler : redimensionner en 1200x800, JPG, nom de fichier exact.
+
 ## Règles d'écriture
 - Vouvoiement, ton chaleureux et concret. Aucun tiret cadratin ni demi-cadratin (le script refuse de générer la page s'il en trouve), car cela trahit une rédaction par IA.
 - 1 200 à 1 800 mots, H2 sous forme de questions ou de listes, FAQ de 3 questions.
