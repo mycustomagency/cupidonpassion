@@ -1,0 +1,48 @@
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="name">Cupidon Passion</span>
+        <p class="disc">Des idées pour raviver la complicité de votre couple et construire, jour après jour, vos projets à deux.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <a href="idees-rendez-vous-couple.html">Idées de rendez-vous</a>
+        <a href="questions-a-poser-en-couple.html">Questions à poser</a>
+        <a href="tu-preferes-couple.html">Jeu « Tu préfères »</a>
+        <a href="conseils.html">Conseils</a>
+      </div>
+      <div>
+        <h4>Le projet</h4>
+        <a href="a-propos.html">À propos</a>
+        <a href="index.html#lettre">La lettre</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Cupidon Passion. En route vers l'Amour.</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+  const b=document.querySelector('.burger'), m=document.getElementById('menu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  (function(){
+    var BREVO="https://fb4f4ac6.sibforms.com/serve/MUIFAGkxwtVL-eX5tCLWsv9tlrtho9krGHGnXAo-7mnkajMTaEnuxkTs1sxIhWe6QxDj7SRoquALveNsWEMyDz0-mQrKlSUxNWROUuat_c4CQ_-34XAUciGCORhT8hUoq-y9LqW2rh2dFxad4CqrKtMTkgU5iP3j9Xe7wfdxiWWeb3B8M5zN-Gl-q2x4TxeERi0pbPmu8OMT5Ysfhg==";
+    document.querySelectorAll('.news-inline').forEach(function(f){
+      f.addEventListener('submit',function(){
+        var em=f.querySelector('.letter-email').value.trim();
+        if(!em) return;
+        var fd=new FormData(); fd.append('EMAIL',em);
+        fetch(BREVO,{method:'POST',body:fd,mode:'no-cors'});
+        var msg=f.parentNode.querySelector('.letter-msg');
+        if(msg) msg.textContent="Merci ! Votre inscription est bien prise en compte.";
+        f.querySelector('.letter-email').value="";
+      });
+    });
+  })();
+</script>
+</body>
+</html>
