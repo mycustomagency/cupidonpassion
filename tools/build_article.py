@@ -47,6 +47,8 @@ def main(path):
           "publisher": {"@type": "Organization", "name": "Cupidon Passion"},
           "description": desc, "mainEntityOfPage": url}
     if og_img: ld["image"] = BASE + og_img
+    if d.get("noindex"):
+        head = head.replace('<meta name="viewport"', '<meta name="robots" content="noindex, follow">\n<meta name="viewport"', 1)
     blocks = [json.dumps(ld, ensure_ascii=False)]
     if d.get("faq"):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -58,7 +60,7 @@ def main(path):
     # --- corps
     parts = [f'<article class="article wrap">\n  <p class="meta"><a href="index.html">Accueil</a> › <a href="conseils.html">Conseils</a> › {esc(d["h1"])}</p>',
              f'  <h1>{esc(d["h1"])}</h1>',
-             f'  <p class="meta">Lecture {d["minutes"]} min</p>']
+             (f'  <p class="meta">Lecture {d["minutes"]} min</p>' if d.get("minutes") else '')]
     body = d["body_html"]
     # figures : {{img:clé}} dans le corps
     for key, im in d.get("images", {}).items():
@@ -75,14 +77,14 @@ def main(path):
     # --- sitemap
     sm_path = os.path.join(ROOT, "sitemap.xml")
     sm = open(sm_path, encoding="utf-8").read()
-    if url not in sm:
+    if url not in sm and not d.get("skip_sitemap"):
         sm = sm.replace("</urlset>", f'  <url><loc>{url}</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>')
         open(sm_path, "w", encoding="utf-8").write(sm)
 
     # --- grille conseils
     cp = os.path.join(ROOT, "conseils.html")
     c = open(cp, encoding="utf-8").read()
-    if f'href="{page}"' not in c:
+    if f'href="{page}"' not in c and not d.get("skip_card"):
         card = (f'    <a class="blog-card" href="{page}">\n      <span class="blog-tag">{esc(d["tag"])}</span>\n'
                 f'      <h2>{esc(d["h1"])}</h2>\n      <p>{esc(d["card_excerpt"])}</p>\n'
                 f'      <span class="blog-more">Lire l\'article →</span>\n    </a>\n\n')
