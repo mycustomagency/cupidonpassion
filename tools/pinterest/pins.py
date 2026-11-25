@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import os, random
 
 SITE = "/home/claude/mycustomagency/cupidonpassion"
-MASCOT = Image.open(f"{SITE}/assets/cupidon.png").convert("RGBA")
+MASCOT = Image.open("/home/claude/cupidonpassion/tools/pinterest/cupidon-hd.png").convert("RGBA")
 PHOTOS = f"{SITE}/assets/img/blog"
 
 NUIT, NUIT2, INDIGO, ROI = (13, 11, 46), (20, 18, 56), (26, 25, 102), (52, 50, 202)
