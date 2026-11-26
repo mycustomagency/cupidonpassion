@@ -41,88 +41,145 @@
 </header>
 
 <main>
-<article class="article wrap">
+<article class="article wrap blog-wide">
   <p class="meta"><a href="index.html">Accueil</a> › Conseils</p>
-  <h1>Conseils et idées pour votre couple</h1>
-  <p style="color:var(--creme-doux);max-width:60ch;margin-bottom:8px">Des idées concrètes pour raviver la complicité, sortir de la routine et nourrir votre histoire à deux. Piochez, testez, recommencez.</p>
+  <section class="blog-hero">
+    <div class="blog-hero-txt">
+      <p class="eyebrow-script">Le blog de Cupidon</p>
+      <h1>Conseils et idées pour votre couple</h1>
+      <p class="blog-intro">Rendez-vous, jeux, cadeaux, petits rituels : piochez une idée, testez-la ce soir, et recommencez.</p>
+      <div class="chips" role="group" aria-label="Filtrer les articles">
+        <button type="button" class="chip on" data-f="">Tous</button>
+        <button type="button" class="chip" data-f="complicite">Complicité</button>
+        <button type="button" class="chip" data-f="cadeaux">Cadeaux</button>
+        <button type="button" class="chip" data-f="noel">Noël et fêtes</button>
+        <button type="button" class="chip" data-f="jeux">Jeux</button>
+      </div>
+    </div>
+    <div class="daily-card">
+      <div class="daily-head">
+        <span class="mascot-badge"><img src="assets/cupidon.png" alt="" width="66" height="66"></span>
+        <div><p class="daily-label">La carte du jour</p><p class="daily-sub">Tirez une idée à vivre à deux</p></div>
+      </div>
+      <p class="daily-kind" id="dk">Rendez-vous</p>
+      <p class="daily-text" id="dt" aria-live="polite">Ce soir, pique-nique dans le salon, bougies comprises.</p>
+      <div class="daily-actions">
+        <button type="button" class="btn btn-primary" id="draw">Tirer une autre carte</button>
+        <a href="idees-rendez-vous-couple.html" id="dl">Plus d'idées comme ça</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="blog-grid">
-
-    <a class="blog-card" href="resolutions-de-couple.html">
-      <span class="blog-tag">Complicité</span>
-      <h2>Résolutions de couple : 10 idées simples qui tiennent vraiment</h2>
-      <p>Deux ou trois petites promesses à deux valent mieux qu'une longue liste : méthode, dix idées concrètes et astuces pour tenir.</p>
-      <span class="blog-more">Lire l'article →</span>
-    </a>
-
-    <a class="blog-card" href="retrouver-complicite-couple.html">
-      <span class="blog-tag">Complicité</span>
-      <h2>Retrouver la complicité dans son couple : 7 gestes simples</h2>
-      <p>Pourquoi la complicité s'efface et comment la retrouver par petites touches : gestes simples, rire, dialogue et rituels à deux.</p>
-      <span class="blog-more">Lire l'article →</span>
-    </a>
-
-    <a class="blog-card" href="jeux-de-couple-a-deux.html">
-      <span class="blog-tag">Jeux</span>
-      <h2>Jeux de couple à faire à deux : gratuits, à acheter ou en ligne</h2>
-      <p>Jeux gratuits, jeux en boîte ou jeu en ligne : une comparaison sincère pour choisir comment jouer à deux.</p>
-      <span class="blog-more">Lire l'article →</span>
-    </a>
-
-    <a class="blog-card" href="idees-cadeaux-saint-valentin-couple.html">
-      <span class="blog-tag">Saint-Valentin</span>
-      <h2>Idées de cadeaux de Saint-Valentin pour sortir de la routine</h2>
-      <p>Moments à deux, jeux, souvenirs et idées maison : des cadeaux de Saint-Valentin pour un couple qui veut sortir de la routine.</p>
-      <span class="blog-more">Lire l'article →</span>
-    </a>
-
-    <a class="blog-card" href="idees-cadeaux-noel-couple.html">
-      <span class="blog-tag">Noël</span>
+  <a class="post-feature" href="idees-cadeaux-noel-couple.html">
+    <div class="post-feature-img"><img src="assets/img/blog/idees-cadeaux-noel-couple-1.jpg" alt="Cadeaux de Noël emballés" width="1200" height="800"></div>
+    <div class="post-feature-txt">
+      <span class="post-badge">À la une · Noël</span>
       <h2>Idées cadeaux de Noël pour un couple : offrir du temps plutôt qu'un objet</h2>
-      <p>Expériences, jeux à deux, souvenirs et idées maison : une sélection pour offrir du temps plutôt qu'un objet.</p>
-      <span class="blog-more">Lire l'article →</span>
+      <p>Expériences, jeux, souvenirs à garder : nos coups de cœur pour tous les budgets, faits maison ou à commander.</p>
+      <span class="post-more">Lire l'article →</span>
+    </div>
+  </a>
+
+  <h2 class="grid-title" id="gt">Tous les articles</h2>
+  <div class="post-grid" id="pg">
+
+    <a class="post-card" href="resolutions-de-couple.html" data-cat="complicite">
+      <div class="post-img"><img src="assets/img/blog/cards/resolutions-de-couple.jpg" alt="Feuille de résolutions et deux tasses de thé sur une table en bois" width="720" height="480" loading="lazy"><span class="post-tag">Complicité</span></div>
+      <div class="post-body">
+        <h2>Résolutions de couple : 10 idées simples qui tiennent vraiment</h2>
+        <p>Deux ou trois petites promesses à deux valent mieux qu'une longue liste : méthode, dix idées concrètes et astuces pour tenir.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
-    <a class="blog-card" href="calendrier-avent-couple.html">
-      <span class="blog-tag">Noël</span>
-      <h2>Calendrier de l'avent pour couple : 24 idées à faire soi-même</h2>
-      <p>Vingt-quatre petites attentions pour arriver à Noël plus proches : matériel, idées de cases et astuces pour tenir jusqu'au bout.</p>
-      <span class="blog-more">Lire l'article →</span>
+    <a class="post-card" href="retrouver-complicite-couple.html" data-cat="complicite">
+      <div class="post-img"><img src="assets/img/blog/cards/retrouver-complicite-couple.jpg" alt="Salon cosy avec plaid et deux tasses" width="720" height="480" loading="lazy"><span class="post-tag">Complicité</span></div>
+      <div class="post-body">
+        <h2>Retrouver la complicité dans son couple : 7 gestes simples</h2>
+        <p>Pourquoi la complicité s'efface et comment la retrouver par petites touches : gestes simples, rire, dialogue et rituels à deux.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
-    <a class="blog-card" href="idee-cadeau-couple.html">
-      <span class="blog-tag">Cadeaux</span>
-      <h2>Idée cadeau pour un couple : 30 idées originales à offrir</h2>
-      <p>Quoi offrir à un couple pour un anniversaire, Noël ou juste pour faire plaisir ? Nos meilleures idées, pour tous les budgets.</p>
-      <span class="blog-more">Lire l'article →</span>
+    <a class="post-card" href="jeux-de-couple-a-deux.html" data-cat="jeux">
+      <div class="post-img"><img src="assets/img/blog/cards/jeux-de-couple-a-deux.jpg" alt="Cartes de jeu et deux tasses sur une table basse" width="720" height="480" loading="lazy"><span class="post-tag">Jeux</span></div>
+      <div class="post-body">
+        <h2>Jeux de couple à faire à deux : gratuits, à acheter ou en ligne</h2>
+        <p>Jeux gratuits, jeux en boîte ou jeu en ligne : une comparaison sincère pour choisir comment jouer à deux.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
-    <a class="blog-card" href="que-faire-couple-fetes.html">
-      <span class="blog-tag">Fêtes</span>
-      <h2>Que faire à deux pendant les fêtes de fin d'année ?</h2>
-      <p>Des idées d'activités à vivre en couple pour rendre les fêtes plus complices et chaleureuses.</p>
-      <span class="blog-more">Lire l'article →</span>
+    <a class="post-card" href="idees-cadeaux-saint-valentin-couple.html" data-cat="cadeaux">
+      <div class="post-img"><img src="assets/img/blog/cards/idees-cadeaux-saint-valentin-couple.jpg" alt="Enveloppe rose et tasse de thé près d'une fenêtre" width="720" height="480" loading="lazy"><span class="post-tag">Saint-Valentin</span></div>
+      <div class="post-body">
+        <h2>Idées de cadeaux de Saint-Valentin pour sortir de la routine</h2>
+        <p>Moments à deux, jeux, souvenirs et idées maison : des cadeaux de Saint-Valentin pour un couple qui veut sortir de la routine.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
-    <a class="blog-card" href="cadeau-couple-pas-cher.html">
-      <span class="blog-tag">Budget</span>
-      <h2>Cadeau de couple à petit prix : 20 idées qui font plaisir</h2>
-      <p>Faire plaisir à un couple sans se ruiner, c'est possible. Voici nos idées à petit budget.</p>
-      <span class="blog-more">Lire l'article →</span>
+    <a class="post-card" href="idees-cadeaux-noel-couple.html" data-cat="noel">
+      <div class="post-img"><img src="assets/img/blog/cards/idees-cadeaux-noel-couple.jpg" alt="Cadeaux de Noël emballés" width="720" height="480" loading="lazy"><span class="post-tag">Noël</span></div>
+      <div class="post-body">
+        <h2>Idées cadeaux de Noël pour un couple : offrir du temps plutôt qu'un objet</h2>
+        <p>Expériences, jeux à deux, souvenirs et idées maison : une sélection pour offrir du temps plutôt qu'un objet.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
-    <a class="blog-card" href="soiree-amoureux-maison.html">
-      <span class="blog-tag">À la maison</span>
-      <h2>Idées de soirée en amoureux à la maison pour l'hiver</h2>
-      <p>Transformez une soirée ordinaire en vrai moment à deux, bien au chaud, sans dépenser.</p>
-      <span class="blog-more">Lire l'article →</span>
+    <a class="post-card" href="calendrier-avent-couple.html" data-cat="noel">
+      <div class="post-img"><img src="assets/img/blog/cards/calendrier-avent-couple.jpg" alt="Calendrier de l'avent en enveloppes kraft" width="720" height="480" loading="lazy"><span class="post-tag">Noël</span></div>
+      <div class="post-body">
+        <h2>Calendrier de l'avent pour couple : 24 idées à faire soi-même</h2>
+        <p>Vingt-quatre petites attentions pour arriver à Noël plus proches : matériel, idées de cases et astuces pour tenir jusqu'au bout.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
-    <a class="blog-card" href="cadeau-1-an-couple.html">
-      <span class="blog-tag">Anniversaire</span>
-      <h2>Quel cadeau offrir pour 1 an de couple ?</h2>
-      <p>Un an d'amour, ça se célèbre. Nos idées pour marquer votre premier anniversaire à deux.</p>
-      <span class="blog-more">Lire l'article →</span>
+    <a class="post-card" href="idee-cadeau-couple.html" data-cat="cadeaux">
+      <div class="post-img"><img src="assets/img/blog/cards/idee-cadeau-couple.jpg" alt="Deux petits cadeaux en papier kraft avec ruban rose et bougie" width="720" height="480" loading="lazy"><span class="post-tag">Cadeaux</span></div>
+      <div class="post-body">
+        <h2>Idée cadeau pour un couple : 30 idées originales à offrir</h2>
+        <p>Quoi offrir à un couple pour un anniversaire, Noël ou juste pour faire plaisir ? Nos meilleures idées, pour tous les budgets.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="que-faire-couple-fetes.html" data-cat="noel">
+      <div class="post-img"><img src="assets/img/blog/cards/que-faire-couple-fetes.jpg" alt="Deux tasses fumantes devant une fenêtre aux lumières de fête" width="720" height="480" loading="lazy"><span class="post-tag">Fêtes</span></div>
+      <div class="post-body">
+        <h2>Que faire à deux pendant les fêtes de fin d'année ?</h2>
+        <p>Des idées d'activités à vivre en couple pour rendre les fêtes plus complices et chaleureuses.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="cadeau-couple-pas-cher.html" data-cat="cadeaux">
+      <div class="post-img"><img src="assets/img/blog/cards/cadeau-couple-pas-cher.jpg" alt="Bocal de petits mots, deux mugs et un cadre photo" width="720" height="480" loading="lazy"><span class="post-tag">Budget</span></div>
+      <div class="post-body">
+        <h2>Cadeau de couple à petit prix : 20 idées qui font plaisir</h2>
+        <p>Faire plaisir à un couple sans se ruiner, c'est possible. Voici nos idées à petit budget.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="soiree-amoureux-maison.html" data-cat="complicite">
+      <div class="post-img"><img src="assets/img/blog/cards/soiree-amoureux-maison.jpg" alt="Salon d'hiver avec plaid, bougies et chocolats chauds" width="720" height="480" loading="lazy"><span class="post-tag">À la maison</span></div>
+      <div class="post-body">
+        <h2>Idées de soirée en amoureux à la maison pour l'hiver</h2>
+        <p>Transformez une soirée ordinaire en vrai moment à deux, bien au chaud, sans dépenser.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="cadeau-1-an-couple.html" data-cat="cadeaux">
+      <div class="post-img"><img src="assets/img/blog/cards/cadeau-1-an-couple.jpg" alt="Album photo ouvert et deux verres sur une table" width="720" height="480" loading="lazy"><span class="post-tag">Anniversaire</span></div>
+      <div class="post-body">
+        <h2>Quel cadeau offrir pour 1 an de couple ?</h2>
+        <p>Un an d'amour, ça se célèbre. Nos idées pour marquer votre premier anniversaire à deux.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
     </a>
 
   </div>
@@ -169,6 +226,33 @@
 <script>
   const b=document.querySelector('.burger'), m=document.getElementById('menu');
   b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+</script>
+<script>
+(function(){
+  var ideas=[
+    ["Rendez-vous","Ce soir, pique-nique dans le salon, bougies comprises.","idees-rendez-vous-couple.html"],
+    ["Question","Quel moment de notre histoire aimerais-tu revivre ?","questions-a-poser-en-couple.html"],
+    ["Défi","Chacun fait un compliment précis à l'autre avant de dormir.","retrouver-complicite-couple.html"],
+    ["Tu préfères","Un week-end surprise ou une soirée plaid et film ?","tu-preferes-couple.html"],
+    ["Rituel","Dix minutes sans téléphone pour se raconter la journée.","retrouver-complicite-couple.html"],
+    ["Rendez-vous","Explorez un quartier de votre ville que vous ne connaissez pas.","idees-rendez-vous-couple.html"],
+    ["Question","Qu'est-ce qui t'a fait sourire cette semaine ?","questions-a-poser-en-couple.html"],
+    ["Défi","Préparez le petit-déjeuner de l'autre, sans rien dire avant.","idees-rendez-vous-couple.html"],
+    ["Tu préfères","Cuisiner ensemble ou commander et danser dans le salon ?","tu-preferes-couple.html"],
+    ["Soirée","Plaid, chocolat chaud et téléphones dans un tiroir.","soiree-amoureux-maison.html"]
+  ];
+  var i=Math.floor(Math.random()*ideas.length), dk=document.getElementById('dk'), dt=document.getElementById('dt'), dl=document.getElementById('dl');
+  function show(){var c=ideas[i%ideas.length];dk.textContent=c[0];dt.textContent=c[1];dl.href=c[2];}
+  show();
+  document.getElementById('draw').addEventListener('click',function(){i+=1+Math.floor(Math.random()*(ideas.length-1));show();});
+  var names={'':'Tous les articles','complicite':'Complicité','cadeaux':'Cadeaux','noel':'Noël et fêtes','jeux':'Jeux'};
+  document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    document.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b);});
+    document.querySelectorAll('#pg .post-card').forEach(function(c){c.hidden=!!f&&c.getAttribute('data-cat')!==f;});
+    document.getElementById('gt').textContent=names[f];
+  });});
+})();
 </script>
 </body>
 </html>

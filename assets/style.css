@@ -242,3 +242,49 @@ footer.site{border-top:1px solid var(--trait);padding:48px 0 34px;margin-top:40p
   border-radius:var(--r);padding:24px 26px;margin:30px 0}
 .cta-game h3{color:#fff;margin:0 0 8px}
 .cta-game p{margin:0 0 14px;color:var(--creme-doux)}
+/* Page Conseils : cartes photo, carte du jour, filtres */
+.blog-hero{display:flex;flex-wrap:wrap;gap:36px;align-items:center;margin:6px 0 40px}
+.blog-hero-txt{flex:999 1 480px;min-width:0}
+.eyebrow-script{font-family:"Dancing Script",cursive;font-size:1.8rem;color:var(--or);margin:0 0 4px}
+.blog-hero h1{font-size:clamp(2rem,4.4vw,3.1rem);margin:0 0 12px}
+.blog-intro{color:var(--creme-doux);max-width:56ch;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border-radius:999px;padding:10px 18px;min-height:44px;font:600 .95rem Inter,sans-serif;cursor:pointer;background:transparent;color:var(--creme);border:1px solid rgba(255,255,255,.28)}
+.chip.on,.chip:hover{background:var(--corail);border-color:var(--corail);color:#fff}
+.daily-card{flex:1 1 340px;min-width:0;background:var(--creme);color:var(--nuit);border-radius:24px;padding:24px 24px 20px;box-shadow:0 24px 60px rgba(232,69,90,.25)}
+.daily-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.mascot-badge{width:76px;height:76px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#3432ca 0%,#1a1966 60%,#0d0b2e 100%);box-shadow:0 6px 16px rgba(13,11,46,.35),0 0 0 3px var(--or)}
+.mascot-badge img{width:66px;height:66px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+.daily-label{margin:0;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--corail)}
+.daily-sub{margin:0;font-size:.9rem;color:#4a4566}
+.daily-kind{margin:0 0 6px;font-size:.85rem;font-weight:700;color:var(--indigo)}
+.daily-text{margin:0 0 16px;font-size:1.3rem;line-height:1.35;font-weight:700;min-height:3.6em}
+.daily-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.daily-actions a{color:var(--indigo);font-weight:700;font-size:.92rem}
+.post-feature{display:flex;flex-wrap:wrap;background:var(--nuit-2);border:1px solid var(--trait);border-radius:24px;overflow:hidden;text-decoration:none;color:var(--creme);margin-bottom:44px;transition:transform .2s ease,box-shadow .2s ease}
+.post-feature:hover,.post-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.45);text-decoration:none}
+.post-feature-img{flex:1 1 440px;min-width:0;max-height:340px;overflow:hidden}
+.post-feature-img img,.post-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.post-feature:hover img,.post-card:hover img{transform:scale(1.05)}
+.post-feature-txt{flex:1 1 340px;min-width:0;padding:30px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.post-feature-txt h2{margin:0;font-size:1.7rem}
+.post-feature-txt p{margin:0;color:var(--creme-doux)}
+.post-badge{align-self:flex-start;background:var(--or);color:var(--nuit);font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.grid-title{font-size:1.6rem;margin:0 0 20px}
+.post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+.post-card{display:flex;flex-direction:column;background:var(--nuit-2);border:1px solid var(--trait);border-radius:20px;overflow:hidden;text-decoration:none;color:var(--creme);transition:transform .2s ease,box-shadow .2s ease}
+.post-card[hidden]{display:none}
+.post-img{position:relative;aspect-ratio:3/2;overflow:hidden}
+.post-tag{position:absolute;left:14px;top:14px;background:rgba(13,11,46,.82);color:var(--or);font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.post-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
+.post-body h2{margin:0;font-size:1.15rem;line-height:1.3;color:#fff}
+.post-body p{margin:0;font-size:.93rem;line-height:1.55;color:var(--creme-doux);flex-grow:1}
+.post-more{color:var(--rose);font-weight:700;font-size:.9rem}
+.article.blog-wide{max-width:1180px}
+.daily-card p.daily-label{color:var(--corail)}
+.daily-card p.daily-sub{color:#4a4566}
+.daily-card p.daily-kind{color:var(--indigo)}
+.daily-card p.daily-text{color:var(--nuit)}
+.post-body p,.post-feature-txt p{margin:0}
+.article .post-body h2,.article .post-feature-txt h2,.article .grid-title{margin-top:0}
+.article.blog-wide{padding-left:22px;padding-right:22px}
