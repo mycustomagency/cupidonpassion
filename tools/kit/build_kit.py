@@ -43,8 +43,8 @@ body{margin:0;background:#fff;font-family:Inter,sans-serif;color:#1d1a3a;-webkit
 .cover .site{position:absolute;bottom:14mm;font-size:10pt;color:#c9c3da;letter-spacing:.1em}
 /* section header */
 .sechead{display:flex;gap:6mm;align-items:center;margin:0 0 7mm}
-.medal{width:30mm;height:30mm;flex-shrink:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#3432ca 0%,#1a1966 60%,#0d0b2e 100%);box-shadow:0 0 0 1.2mm #e5b567;display:flex;align-items:center;justify-content:center}
-.medal img{width:26mm}
+.medal{width:30mm;height:30mm;flex-shrink:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#3432ca 0%,#1a1966 60%,#0d0b2e 100%);border:1.2mm solid #e5b567;overflow:hidden;display:flex;align-items:center;justify-content:center;margin:1mm}
+.medal img{width:23mm;display:block}
 .kicker{margin:0;font-family:Dancing;font-size:20pt;color:#e8455a}
 .secnum{font-family:Inter;font-weight:800;font-size:10pt;background:#e5b567;color:#0d0b2e;border-radius:99px;padding:.6mm 3mm;margin-right:3mm;vertical-align:middle}
 h2{margin:1mm 0 2mm;font-size:24pt;line-height:1.1;color:#0d0b2e;font-weight:800}
