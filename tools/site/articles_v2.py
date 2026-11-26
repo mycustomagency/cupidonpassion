@@ -3,9 +3,9 @@ import re, os, html, urllib.parse
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SITE = "https://cupidonpassion.com/"
 A = {
- "idees-rendez-vous-couple": ("Rendez-vous", "60 idées de rendez-vous en couple", "soiree-amoureux-maison-1.jpg", "soiree-amoureux-maison.jpg", "rdv"),
- "questions-a-poser-en-couple": ("Complicité", "100 questions à poser en couple", "retrouver-complicite-couple-1.jpg", "retrouver-complicite-couple.jpg", "qs"),
- "tu-preferes-couple": ("Jeux", "Tu préfères : le jeu en 40 questions", "jeux-de-couple-a-deux-1.jpg", "jeux-de-couple-a-deux.jpg", "tp"),
+ "idees-rendez-vous-couple": ("Rendez-vous", "60 idées de rendez-vous en couple", None, None, "rdv"),
+ "questions-a-poser-en-couple": ("Complicité", "100 questions à poser en couple", None, None, "qs"),
+ "tu-preferes-couple": ("Jeux", "Tu préfères : le jeu en 40 questions", None, None, "tp"),
  "jeux-de-couple-a-deux": ("Jeux", "Jeux de couple à faire à deux", None, None, "tp"),
  "retrouver-complicite-couple": ("Complicité", "Retrouver la complicité : 7 gestes simples", None, None, "qs"),
  "soiree-amoureux-maison": ("À la maison", "Soirée en amoureux à la maison", None, None, "rdv"),
